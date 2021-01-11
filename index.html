@@ -9,19 +9,38 @@
 
     </head>
     <body>
-        <h1 class="Page-Title">Cryptoday</h1>
+        <h1 class="Page-Title"><img class="Coin-Img" src="logo.png" width="50px" height="50px"/>Cryptoday</h1>
+
+        <!-- Bitcoin Informatie block -->
         <div class="Info-Block">
-            <img src="Bitcoin.png" width="25px" height="25px"/>
-            <p>Bitcoin</p>
-            <p id="BTCPrice"></p>
+            <div class="Info-Block-L">
+                <p class="Coin-Name Medium-Text"><img class="Coin-Img" src="Bitcoin.png" width="40px" height="40px"/> Bitcoin</p>
+                <p class="Big-Text" id="BTCPrice"></p>
+            </div>
+            <div class="Info-Block-R">
+                <p class="Small-Text">24h</p>
+                <p id="BTC24h"></p>
+            </div>
+            <div class="More-Info"><a href="" class="More-Info-Text">Click here for more info</a></div>
         </div>
 
+        <!-- Ethereum Informatie block -->
         <div class="Info-Block">
-            <img src="Ethereum.png" width="18px" height="25px"/>
-            <p>Ethereum</p>
-            <p id="ETHPrice"></p>
+            <div class="Info-Block-L">
+                <p class="Coin-Name Medium-Text"><img class="Coin-Img" src="Ethereum.png" width="25px" height="40px"/> Ethereum</p>
+                <p class="Big-Text" id="ETHPrice"></p>
+            </div>
+            <div class="Info-Block-R">
+                <p class="Small-Text">24h</p>
+                <p id="ETH24h"></p>
+            </div>
+            <div class="More-Info"><a href="" class="More-Info-Text">Click here for more info</a></div>
         </div>
 
-
+        <div class="navbar">
+            <a href="#home">H</a>
+            <a href="#market">M</a>
+            <a href="#news">$</a>
+          </div> 
     </body>
 </html>

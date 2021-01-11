@@ -35,11 +35,104 @@ body
     margin: 40px 0;
 }
 
+.Info-Block-L
+{
+    float: left;
+    text-align: center;
+    width: 66%;
+    height: 80%;
+}
+
+.Info-Block-R
+{
+    float: right;
+    text-align: center;
+    width: 34%;
+    height: 80%;
+}
+
+.More-Info
+{
+    text-align: center;
+    width: 100%;
+    height: 20%;
+}
+
+.More-Info-Text
+{
+    text-decoration: none;
+    color: #f2f2f2;
+    font-size: 15px;
+}
+
+.Info-Block-L *, .Info-Block-R *
+{
+    margin: 0;
+}
+
+.Small-Text
+{
+    font-size: 10px;
+    margin-top: 65px;
+}
+
+.Medium-Text
+{
+    font-size: 30px;
+}
+
+.Big-Text
+{
+    font-size: 38px;
+}
+
+.Coin-Img
+{
+    left: 28px;
+    position: absolute;
+}
+
+.Coin-Name
+{
+    margin-top: 15px;
+    margin-bottom: 18px;
+}
+
+.Positive
+{
+    color: #5ABF86;
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+.Negative
+{
+    color: #FF2D2D;
+    font-size: 22px;
+    margin-top: 5px;
+}
 
 
+/* NAVBAR */
 
-
-
+.navbar {
+    background-color: #5abf86;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 40px;
+  }
 
 
 
