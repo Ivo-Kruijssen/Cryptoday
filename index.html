@@ -5,54 +5,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script> 
+
     </head>
     <body>
         <h1 class="Page-Title">Cryptoday</h1>
-        <div id="root" class="Info-Block">
-            
+        <div class="Info-Block">
+            <img src="Bitcoin.png" width="25px" height="25px"/>
+            <p>Bitcoin</p>
+            <p id="BTCPrice"></p>
         </div>
 
         <div class="Info-Block">
-            
+            <img src="Ethereum.png" width="18px" height="25px"/>
+            <p>Ethereum</p>
+            <p id="ETHPrice"></p>
         </div>
 
 
     </body>
-    <script>
-
-        
-        var burl = "https://api.binance.com";
-
-        
-        var query = '/api/v3/ticker/price';
-
-        query += '?symbol=BTCUSDT';
-
-       
-        var url = burl + query;
-
-     
-        var ourRequest = new XMLHttpRequest();
-
-        ourRequest.open('GET',url,true);
-        ourRequest.onload = function(){
-            console.log(ourRequest.responseText);
-            var data = JSON.parse(ourRequest.responseText);
-            console.log(data.price);
-
-        const app = document.getElementById('root')
-
-        const p = document.createElement('p')
-        p.textContent = data.price
-
-        app.appendChild(p)
-
-        }
-     
-        ourRequest.send();
-
-
-
-
-    </script>
 </html>
