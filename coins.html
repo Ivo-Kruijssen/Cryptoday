@@ -12,33 +12,8 @@
 
         <!-- Page Banner -->
         <h1 class="Page-Title"><img class="Coin-Img" src="logo.png" width="50px" height="50px"/>Cryptoday</h1>
-
-        <!-- News Slideshow -->
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-                <img src="News2.png" style="width:100%; height: 150px;">
-                <div class="text">Bitcoin up to $42.000,00</div>
-            </div>
-            
-            <div class="mySlides fade">
-                <img src="News3.png" style="width:100%; height:150px;">
-                <div class="text">Bitcoin dropped 10k in 24h</div>
-            </div>
-            
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            
-        </div>
-        <br>
-        <!-- Dots under slideshow -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-        </div>
-
-
         
+
         <!-- Bitcoin Informatie block -->
         <div class="Info-Block">
             <!-- Bitcoin Price -->
@@ -46,6 +21,7 @@
                 <p class="Coin-Name Medium-Text"><img class="Coin-Img" src="Bitcoin.png" width="40px" height="40px"/> Bitcoin</p>
                 <p class="Big-Text" id="BTCPrice"></p>
             </div>
+
             <!-- Bitcoin 24h price change -->
             <div class="Info-Block-R">
                 <p class="Small-Text">24h</p>
@@ -62,6 +38,7 @@
                 <p class="Coin-Name Medium-Text"><img class="Coin-Img" src="Ethereum.png" width="25px" height="40px"/> Ethereum</p>
                 <p class="Big-Text" id="ETHPrice"></p>
             </div>
+
             <!-- Ethereum 24h price change -->
             <div class="Info-Block-R">
                 <p class="Small-Text">24h</p>
@@ -70,43 +47,30 @@
             <div class="More-Info"><a href="" class="More-Info-Text">Click here for more info</a></div>
         </div>
 
+
+        <!-- Ripple Informatie block -->
+        <div class="Info-Block">
+            <!-- Ripple Price -->
+            <div class="Info-Block-L">
+                <p class="Coin-Name Medium-Text"><img class="Coin-Img" src="XRP.png" width="40px" height="40px"/> XRP</p>
+                <p class="Big-Text" id="XRPPrice"></p>
+            </div>
+
+            <!-- Ripple 24h price change -->
+            <div class="Info-Block-R">
+                <p class="Small-Text">24h</p>
+                <p class="Percentage"><span id="XRPCaret"></span><p id="XRP24h"></p></p>
+            </div>
+            <div class="More-Info"><a href="" class="More-Info-Text">Click here for more info</a></div>
+        </div>
+
         <!-- Navbar -->
         <div class="navbar">
             <a></a>
-            <a href="#">H</a>
-            <a href="coins.html">M</a>
+            <a href="index.html">H</a>
+            <a href="#">M</a>
             <a href="#news">$</a>
             <a></a>
         </div> 
     </body>
-    <script>
-
-        // Script for News slideshow
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-        </script>
 </html>

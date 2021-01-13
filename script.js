@@ -136,3 +136,71 @@ ourRequest4.send();
 
 
 
+//XRP Prijs in USD Tether ophalen
+var query = '/api/v3/ticker/price';
+
+query += '?symbol=XRPUSDT';
+
+var url = burl + query;
+
+
+var ourRequest5 = new XMLHttpRequest();
+
+ourRequest5.open('GET',url,true);
+ourRequest5.onload = function(){
+    var data = JSON.parse(ourRequest5.responseText);
+
+    const XRPPrice = document.getElementById('XRPPrice')
+    XRPPrice.textContent = '$' + parseFloat(data.price).toFixed(4);
+
+}
+
+ourRequest5.send();
+
+
+
+
+//XRP 24h change ophalen
+var query = '/api/v3/ticker/24hr';
+
+query += '?symbol=XRPUSDT';
+
+var url = burl + query;
+
+
+var ourRequest6 = new XMLHttpRequest();
+
+ourRequest6.open('GET',url,true);
+ourRequest6.onload = function(){
+    var data = JSON.parse(ourRequest6.responseText);
+
+    const XRP24h = document.getElementById('XRP24h')
+    const XRPCaret = document.getElementById('XRPCaret')
+    
+
+    if (data.priceChangePercent >= 0) {
+        XRP24h.textContent = parseFloat(data.priceChangePercent).toFixed(2) + '%';
+        XRP24h.setAttribute('class', 'Positive')
+        XRPCaret.textContent = '▲';
+        XRPCaret.setAttribute('class', 'Positive')
+    }
+    else
+    {
+        XRP24h.textContent = parseFloat(data.priceChangePercent).toFixed(2) + '%';
+        XRP24h.textContent = XRP24h.textContent.replace("-", "");
+        XRP24h.setAttribute('class', 'Negative')
+        XRPCaret.textContent = '▼';
+        XRPCaret.setAttribute('class', 'Negative')
+    }
+
+}
+
+ourRequest6.send();
+
+
+
+
+
+
+
+
