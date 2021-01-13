@@ -71,15 +71,22 @@ ourRequest3.onload = function(){
     var data = JSON.parse(ourRequest3.responseText);
 
     const BTC24h = document.getElementById('BTC24h')
-    BTC24h.textContent = parseFloat(data.priceChangePercent).toFixed(2) + '%';
+    const BTCCaret = document.getElementById('BTCCaret')
+
 
     if (data.priceChangePercent >= 0) {
+        BTC24h.textContent = parseFloat(data.priceChangePercent).toFixed(2) + '%';
         BTC24h.setAttribute('class', 'Positive')
+        BTCCaret.textContent = '▲';
+        BTCCaret.setAttribute('class', 'Positive')
     }
     else
     {
+        BTC24h.textContent = parseFloat(data.priceChangePercent).toFixed(2) + '%';
+        BTC24h.textContent = BTC24h.textContent.replace("-", "");
         BTC24h.setAttribute('class', 'Negative')
-    }
+        BTCCaret.textContent = '▼';
+        BTCCaret.setAttribute('class', 'Negative')    }
 
 }
 
@@ -88,7 +95,7 @@ ourRequest3.send();
 
 
 
-//BTC 24h change ophalen
+//ETH 24h change ophalen
 var query = '/api/v3/ticker/24hr';
 
 query += '?symbol=ETHUSDT';
@@ -103,18 +110,22 @@ ourRequest4.onload = function(){
     var data = JSON.parse(ourRequest4.responseText);
 
     const ETH24h = document.getElementById('ETH24h')
+    const ETHCaret = document.getElementById('ETHCaret')
     
 
     if (data.priceChangePercent >= 0) {
         ETH24h.textContent = parseFloat(data.priceChangePercent).toFixed(2) + '%';
-        
         ETH24h.setAttribute('class', 'Positive')
+        ETHCaret.textContent = '▲';
+        ETHCaret.setAttribute('class', 'Positive')
     }
     else
     {
         ETH24h.textContent = parseFloat(data.priceChangePercent).toFixed(2) + '%';
         ETH24h.textContent = ETH24h.textContent.replace("-", "");
         ETH24h.setAttribute('class', 'Negative')
+        ETHCaret.textContent = '▼';
+        ETHCaret.setAttribute('class', 'Negative')
     }
 
 }

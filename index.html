@@ -37,33 +37,40 @@
             <span class="dot" onclick="currentSlide(2)"></span> 
         </div>
 
-               <!-- Bitcoin Informatie block -->
+
+        
+        <!-- Bitcoin Informatie block -->
         <div class="Info-Block">
+            <!-- Bitcoin Price -->
             <div class="Info-Block-L">
                 <p class="Coin-Name Medium-Text"><img class="Coin-Img" src="Bitcoin.png" width="40px" height="40px"/> Bitcoin</p>
                 <p class="Big-Text" id="BTCPrice"></p>
             </div>
-
+            <!-- Bitcoin 24h price change -->
             <div class="Info-Block-R">
                 <p class="Small-Text">24h</p>
-                <p id="BTC24h"></p>
+                <p class="Percentage"><span id="BTCCaret"></span><p id="BTC24h"></p></p>
             </div>
             <div class="More-Info"><a href="" class="More-Info-Text">Click here for more info</a></div>
         </div>
 
+
         <!-- Ethereum Informatie block -->
         <div class="Info-Block">
+            <!-- Ethereum Price -->
             <div class="Info-Block-L">
                 <p class="Coin-Name Medium-Text"><img class="Coin-Img" src="Ethereum.png" width="25px" height="40px"/> Ethereum</p>
                 <p class="Big-Text" id="ETHPrice"></p>
             </div>
+            <!-- Ethereum 24h price change -->
             <div class="Info-Block-R">
                 <p class="Small-Text">24h</p>
-                <p id="ETH24h"></p>
+                <p class="Percentage"><span id="ETHCaret"></span><p id="ETH24h"></p></p>
             </div>
             <div class="More-Info"><a href="" class="More-Info-Text">Click here for more info</a></div>
         </div>
 
+        <!-- Navbar -->
         <div class="navbar">
             <a></a>
             <a href="#home">H</a>
@@ -73,6 +80,8 @@
         </div> 
     </body>
     <script>
+
+        // Script for News slideshow
         var slideIndex = 1;
         showSlides(slideIndex);
         

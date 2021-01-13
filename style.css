@@ -26,6 +26,7 @@ body
     width: 100%;
     text-align: center;
     font-weight: 400; 
+    margin-bottom: 30px;
 }
 
 
@@ -60,7 +61,7 @@ img
     top: 50%;
     width: auto;
     padding: 16px;
-    margin-top: -22px;
+    margin-top: -25px;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -89,15 +90,6 @@ img
     bottom: 8px;
     width: 100%;
     text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
   }
   
   /* The dots/bullets/indicators */
@@ -161,6 +153,7 @@ img
 
 .More-Info
 {
+    float: left;
     text-align: center;
     width: 100%;
     height: 20%;
@@ -180,8 +173,8 @@ img
 
 .Small-Text
 {
-    font-size: 10px;
-    margin-top: 65px;
+    font-size: 15px;
+    margin-top: 62px;
 }
 
 .Medium-Text
@@ -206,6 +199,21 @@ img
     margin-bottom: 18px;
 }
 
+.Percentage
+{
+    width: 100%;
+    vertical-align: center;
+    position: relative;
+}
+
+#ETHCaret, #BTCCaret
+{
+    font-size: 17px;
+    position: absolute;
+    top: 4px;
+    left: 12px;
+}
+
 .Positive
 {
     color: #5ABF86;
@@ -215,6 +223,7 @@ img
 
 .Negative
 {
+    /* float: left; */
     color: #FF2D2D;
     font-size: 22px;
     margin-top: 5px;
