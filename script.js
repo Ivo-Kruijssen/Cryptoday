@@ -32,6 +32,10 @@ function UpdatePrice(symbol) {
             Caret.setAttribute('class', 'Negative')
         }
     });
+
+    GetMarketCap(symbol).then(data => {
+        document.getElementById("VOLUME_" + symbol).textContent = "$" + parseFloat(data.price).toFixed(2);
+    });
 }     
 
 // Get the Price
@@ -55,6 +59,18 @@ function GetChange(symbol) {
     ));
     
 }
+
+// Get the Volume of a coin (Volume is daily traded amount of the coin in Dollar)
+function GetMarketCap(symbol) {
+    let api = "https://api.binance.com/api/v3/klines?symbol=" + symbol;
+
+    return fetch(api).then(
+        response => response.json().then(
+            data => {return data}
+    ));
+    
+}
+
 
 
 

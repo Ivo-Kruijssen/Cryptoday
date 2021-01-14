@@ -281,23 +281,23 @@ img
 .Vertical-hr
 {
     width: 2px;
-    height: 85%;
+    height: 88%;
     position: absolute;
     background-color:  #141526;
     border: none;
-    top: 0%;
+    top: 2.5%;
     left: calc(50% - 1px);
 }
 
 .Horizontal-hr
 {
-    width: 85%;
+    width: 90%;
     height: 2px;
     position: absolute;
     background-color:  #141526;
     border: none;
-    top: 54%;
-    left: 7.5%;
+    top: 46.5%;
+    left: 5%;
 }
 
 .Top-Left, .Top-Right, .Bottom-Left, .Bottom-Right
@@ -305,26 +305,7 @@ img
     width: 50%;
     height: 50%;
     float: left;
-    background-color: #378C64;
-}
-
-.Top-Left
-{
-    background-color: #9970db;
-}
-
-.Top-Right
-{
-    background-color: #1f694d;
-}
-.Bottom-Left
-{
-    background-color: #371C64;
-}
-
-.Bottom-Right
-{
-    background-color: #c0bdab;
+    padding: 3% 7%;
 }
 
 

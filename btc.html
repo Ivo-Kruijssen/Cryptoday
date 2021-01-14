@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Bitcoin</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="style.css">
@@ -18,38 +18,54 @@
         <div class="Bigger-Info-Block">
 
             <div class="Top-Left">
-                aaa
+                <p>Market Cap</p>
+                <p>$737,111,834,865</p>
             </div>
 
             <div class="Top-Right">
-                aaa
+                <p>Volume</p>
+                <p>$68,916,831,539</p>
             </div>
             <hr class="Vertical-hr" />
             <hr class="Horizontal-hr" />
-            
             <div class="Bottom-Left">
-                aaa
+                <p>Circulating Supply</p>
+                <p>18,600,218 BTC</p>
             </div>
 
             <div class="Bottom-Right">
-                aaa
+                <p>Useful Sites</p>
+                <a style="color: white;" href="https://www.binance.com">Binance</a>
             </div>
 
         </div>
             
-        <!-- Bitcoin Price -->
-        <div class="Info-Block-L" style="text-align: left; padding-left: 20px;">
-            <p style="margin-left: 5px;">Bitcoin price</p>
-            <p class="Big-Text" id="PRICE_BTCUSDT"></p>
-        </div>
+            <!-- Bitcoin Price -->
+            <div style="position: relative;">
+                <div style="z-index: 100; position: absolute; background-color: #141526; width: 100%; height: 100px;">
+                    <div class="Info-Block-L" style="text-align: left; padding-left: 20px;">
+                        <p style="margin-left: 5px;">Bitcoin price</p>
+                        <p class="Big-Text" id="PRICE_BTCUSDT"></p>
+                    </div>
 
-        <!-- Bitcoin 24h price change -->
-        <div class="Info-Block-R">
-            <p class="Small-Text" style="margin-top: 13px;">24h</p>
-            <p class="Percentage"><span id="CARET_BTCUSDT"></span><p id="CHANGE_BTCUSDT"></p></p>
-        </div>
-        
+                    <!-- Bitcoin 24h price change -->
+                    <div class="Info-Block-R">
+                        <p class="Small-Text" style="margin-top: 13px;">24h</p>
+                        <p class="Percentage"><span id="CARET_BTCUSDT"></span><p id="CHANGE_BTCUSDT"></p></p>
+                    </div>
+                    
+                </div>
+            </div>
+            <br/>
+            
 
+        <!-- Widget for coin -->
+        <div style="height:500px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div></div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <!-- Navbar -->
         <div class="navbar">
             <a></a>
