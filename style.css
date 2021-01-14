@@ -47,15 +47,17 @@ img
 }
 
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container 
+{
     max-width: 80%;
     height: 150px;
     position: relative;
     margin: 10px auto 0 auto;
-  }
-  
+}
+
   /* Next & previous buttons */
-  .prev, .next {
+.prev, .next 
+{
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -68,21 +70,24 @@ img
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-  }
-  
+}
+
   /* Position the "next button" to the right */
-  .next {
+.next 
+{
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-  
+}
+
   /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
+.prev:hover, .next:hover 
+{
     background-color: rgba(0,0,0,0.8);
-  }
-  
+}
+
   /* Caption text */
-  .text {
+.text 
+{
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
@@ -90,10 +95,11 @@ img
     bottom: 8px;
     width: 100%;
     text-align: center;
-  }
-  
+}
+
   /* The dots/bullets/indicators */
-  .dot {
+.dot 
+{
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -102,30 +108,34 @@ img
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
+}
+
+.active, .dot:hover 
+{
     background-color: #717171;
-  }
+}
 
 /* Fading animation */
-.fade {
+.fade 
+{
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
+}
+
+@-webkit-keyframes fade 
+{
     from {opacity: .4} 
     to {opacity: 1}
-  }
-  
-  @keyframes fade {
+}
+
+@keyframes fade 
+{
     from {opacity: .4} 
     to {opacity: 1}
-  }
-  
+}
+
 
 .Info-Block
 {
@@ -206,7 +216,7 @@ img
     position: relative;
 }
 
-#ETHCaret, #BTCCaret
+#CARET_BTCUSDT, #CARET_ETHUSDT, #CARET_XRPUSDT
 {
     font-size: 17px;
     position: absolute;
@@ -232,15 +242,16 @@ img
 
 /* NAVBAR */
 
-.navbar {
+.navbar 
+{
     background-color: #378C64;
     overflow: hidden;
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
-  }
-  
+}
+
 .navbar a 
 {
     float: left;
@@ -255,9 +266,66 @@ img
 }
 
 
+/* More info about coin page */
 
+.Bigger-Info-Block
+{
+    background-color: #2e3159;
+    width: 100%;
+    height: 250px;
+    margin: 30px 0;
+    /* padding: 6%; */
+    position: relative;
+}
 
+.Vertical-hr
+{
+    width: 2px;
+    height: 85%;
+    position: absolute;
+    background-color:  #141526;
+    border: none;
+    top: 0%;
+    left: calc(50% - 1px);
+}
 
+.Horizontal-hr
+{
+    width: 85%;
+    height: 2px;
+    position: absolute;
+    background-color:  #141526;
+    border: none;
+    top: 54%;
+    left: 7.5%;
+}
+
+.Top-Left, .Top-Right, .Bottom-Left, .Bottom-Right
+{
+    width: 50%;
+    height: 50%;
+    float: left;
+    background-color: #378C64;
+}
+
+.Top-Left
+{
+    background-color: #9970db;
+}
+
+.Top-Right
+{
+    background-color: #1f694d;
+}
+.Bottom-Left
+{
+    background-color: #371C64;
+}
+
+.Bottom-Right
+{
+    background-color: #c0bdab;
+}
 
 
 
