@@ -16,7 +16,7 @@ function UpdatePrice(symbol) {
         const PriceChange = document.getElementById("CHANGE_" + symbol)
         const Caret = document.getElementById("CARET_" + symbol)
     
-    
+        // Check if priceChangePercent is positive or negative and
         if (data.priceChangePercent >= 0) {
             PriceChange.textContent = parseFloat(data.priceChangePercent).toFixed(2) + '%';
             PriceChange.setAttribute('class', 'Positive')
