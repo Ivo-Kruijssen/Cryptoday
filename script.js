@@ -1,22 +1,26 @@
 
-// Refreshing
+// Refreshing om de seconde
 setInterval(function() { 
-    UpdatePrice("BTCUSDT");
-    UpdatePrice("ETHUSDT");
-    UpdatePrice("XRPUSDT");
+    // Geef als parameter de coin mee waarvan je de info wilt ophalen
+    UpdateData("BTCUSDT");
+    UpdateData("ETHUSDT");
+    UpdateData("XRPUSDT");
 }, 1000);
 
-function UpdatePrice(symbol) {
+function UpdateData(symbol) {
+
+    // Zet de prijs die je ophaalt op de website
     GetPrice(symbol).then(data => {
         document.getElementById("PRICE_" + symbol).textContent = "$" + parseFloat(data.price).toFixed(2);
     });
 
+    // Zet de change die je ophaalt op de website
     GetChange(symbol).then(data => {
         
         const PriceChange = document.getElementById("CHANGE_" + symbol)
         const Caret = document.getElementById("CARET_" + symbol)
     
-        // Check if priceChangePercent is positive or negative and
+        // Check of priceChangePercent is positive or negative
         if (data.priceChangePercent >= 0) {
             PriceChange.textContent = parseFloat(data.priceChangePercent).toFixed(2) + '%';
             PriceChange.setAttribute('class', 'Positive')
@@ -33,23 +37,20 @@ function UpdatePrice(symbol) {
         }
     });
 
-    GetMarketCap(symbol).then(data => {
-        document.getElementById("VOLUME_" + symbol).textContent = "$" + parseFloat(data.price).toFixed(2);
-    });
 }     
 
-// Get the Price
+// Haal de Prijs van een coin op
 function GetPrice(symbol) {
     let api = "https://api.binance.com/api/v3/ticker/price?symbol=" + symbol;
 
-    // fetch the JSON from data
+    // fetch de JSON van de data
     return fetch(api).then(
         response => response.json().then(
             data => {return data}
     ));
 }
 
-// Get the 24hr price change in %
+// Haal de 24hr price change op in %
 function GetChange(symbol) {
     let api = "https://api.binance.com/api/v3/ticker/24hr?symbol=" + symbol;
 
@@ -59,65 +60,3 @@ function GetChange(symbol) {
     ));
     
 }
-
-// Get the Volume of a coin (Volume is daily traded amount of the coin in Dollar)
-function GetMarketCap(symbol) {
-    let api = "https://api.binance.com/api/v3/klines?symbol=" + symbol;
-
-    return fetch(api).then(
-        response => response.json().then(
-            data => {return data}
-    ));
-    
-}
-
-
-
-
-
-
-
-// //XRP 24h change ophalen
-// var query = '/api/v3/ticker/24hr';
-
-// query += '?symbol=XRPUSDT';
-
-// var url = burl + query;
-
-
-// var ourRequest6 = new XMLHttpRequest();
-
-// ourRequest6.open('GET',url,true);
-// ourRequest6.onload = function(){
-//     var data = JSON.parse(ourRequest6.responseText);
-
-//     const XRP24h = document.getElementById('XRP24h')
-//     const XRPCaret = document.getElementById('XRPCaret')
-    
-
-//     if (data.priceChangePercent >= 0) {
-//         XRP24h.textContent = parseFloat(data.priceChangePercent).toFixed(2) + '%';
-//         XRP24h.setAttribute('class', 'Positive')
-//         XRPCaret.textContent = '▲';
-//         XRPCaret.setAttribute('class', 'Positive')
-//     }
-//     else
-//     {
-//         XRP24h.textContent = parseFloat(data.priceChangePercent).toFixed(2) + '%';
-//         XRP24h.textContent = XRP24h.textContent.replace("-", "");
-//         XRP24h.setAttribute('class', 'Negative')
-//         XRPCaret.textContent = '▼';
-//         XRPCaret.setAttribute('class', 'Negative')
-//     }
-
-// }
-
-// ourRequest6.send();
-
-
-
-
-
-
-
-
